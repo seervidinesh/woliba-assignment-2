@@ -1,0 +1,22 @@
+table {
+  margin: 80px;
+  position: relative;
+  top: 20px;
+  width: 800px;
+  height: 200px;
+  border-collapse: collapse;
+}
+
+th {
+  border-bottom: 1px solid black;
+  border: 2px solid black;
+}
+
+td {
+  text-align: center;
+  border: 2px solid black;
+}
+
+.verify-button {
+  text-align: end;
+}

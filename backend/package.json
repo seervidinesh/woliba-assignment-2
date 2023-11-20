@@ -1,0 +1,53 @@
+{
+  "name": "assignment-eminence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "start:dev": "nodemon src/index.ts",
+    "db:make-migrate": "npx knex migrate:make -x ts",
+    "db:migrate": "npx knex migrate:latest",
+    "db:up": "npx knex migrate:up",
+    "db:down": "npx knex migrate:down",
+    "test": "export NODE_ENV=Test && npx knex migrate:latest && npx mocha -r ts-node/register --exit --timeout 15000 test/**/*.spec.ts -- --silent"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bcrypt": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.4",
+    "@types/uuid": "^9.0.6",
+    "axios": "^1.5.1",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "connection-string-parser": "^1.0.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express-joi-validation": "^5.0.1",
+    "fp-ts": "^2.16.1",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.0.1",
+    "mongoose": "^7.6.3",
+    "mysql": "^2.18.1",
+    "ramda": "^0.29.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.15",
+    "@types/express": "^4.17.20",
+    "@types/mocha": "^10.0.4",
+    "@types/mysql": "^2.15.24",
+    "@types/node": "^20.8.7",
+    "@types/ramda": "^0.29.7",
+    "chai": "^4.3.10",
+    "chai-http": "^4.4.0",
+    "express": "^4.18.2",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

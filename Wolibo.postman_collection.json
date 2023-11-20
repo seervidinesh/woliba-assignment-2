@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "64b0e8fc-fe04-49ee-818e-f16f9c54b9db",
+		"name": "Wolibo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14561743"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"crvidinesh1@gmail.com\",\n    \"roles\": [\"ADMIN\"],\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:4000/user/signup",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"crvidinesh1@gmail.com\",\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:4000/auth/login",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiYmU4YzcwMTItNWNjMC00ZjJiLTliZjctMjkxNDYxNGNlNTgwIiwiaWF0IjoxNzAwMzEyNTM0fQ.24pyRx7kcP7ZTXrYoDenM1MieeJnReVpPN0JgSeIrXY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"crvidinesh@gmail.com\",\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:4000/auth/logout",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiNzY0YzhiZWUtMzQwZC00MTQyLWIzZmItYTFjYmQ5MzcxODZlIiwiaWF0IjoxNzAwMzEyMTY4fQ.DspZ2ugG-U19fUSx5V3fKrVJhXOGCx2chfKvGFAF8dU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiYmU4YzcwMTItNWNjMC00ZjJiLTliZjctMjkxNDYxNGNlNTgwIiwiaWF0IjoxNzAwMzEyNTM0fQ.24pyRx7kcP7ZTXrYoDenM1MieeJnReVpPN0JgSeIrXY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"crvidinesh@gmail.com\",\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:4000/user/me",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Feeds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiNzY0YzhiZWUtMzQwZC00MTQyLWIzZmItYTFjYmQ5MzcxODZlIiwiaWF0IjoxNzAwMzEyMTY4fQ.DspZ2ugG-U19fUSx5V3fKrVJhXOGCx2chfKvGFAF8dU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiY2NmMjRjMmItNDNlNy00ZDVkLTg2NGUtMDk2MDZkYjI3ZGMxIiwiaWF0IjoxNzAwMzEzMDI2fQ.OcfhYy-j-ATknTa9Wn9IU6afNVSgIggytxf6ScMlf9o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"crvidinesh@gmail.com\",\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:4000/feed",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"feed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feed By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiNzY0YzhiZWUtMzQwZC00MTQyLWIzZmItYTFjYmQ5MzcxODZlIiwiaWF0IjoxNzAwMzEyMTY4fQ.DspZ2ugG-U19fUSx5V3fKrVJhXOGCx2chfKvGFAF8dU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiY2NmMjRjMmItNDNlNy00ZDVkLTg2NGUtMDk2MDZkYjI3ZGMxIiwiaWF0IjoxNzAwMzEzMDI2fQ.OcfhYy-j-ATknTa9Wn9IU6afNVSgIggytxf6ScMlf9o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"crvidinesh@gmail.com\",\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:4000/feed/1",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"feed",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Feed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiNzY0YzhiZWUtMzQwZC00MTQyLWIzZmItYTFjYmQ5MzcxODZlIiwiaWF0IjoxNzAwMzEyMTY4fQ.DspZ2ugG-U19fUSx5V3fKrVJhXOGCx2chfKvGFAF8dU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwic2NvcGUiOiJbXCJBRE1JTlwiXSIsInNlc3Npb25JZCI6IjRiYTZmMmMzLWFjNzgtNDg0Yy1hZTA2LWViNjFjMTA2YzEwMyIsImlhdCI6MTcwMDMxMzUyOH0.m4TmBmDKSzOFeLOZYFx9eWMLnRF9_NTEibTa63NpMiw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"crvidinesh@gmail.com\",\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:4000/feed/1",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"feed",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Feed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiNzY0YzhiZWUtMzQwZC00MTQyLWIzZmItYTFjYmQ5MzcxODZlIiwiaWF0IjoxNzAwMzEyMTY4fQ.DspZ2ugG-U19fUSx5V3fKrVJhXOGCx2chfKvGFAF8dU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwic2NvcGUiOiJbXCJBRE1JTlwiXSIsInNlc3Npb25JZCI6IjRiYTZmMmMzLWFjNzgtNDg0Yy1hZTA2LWViNjFjMTA2YzEwMyIsImlhdCI6MTcwMDMxMzUyOH0.m4TmBmDKSzOFeLOZYFx9eWMLnRF9_NTEibTa63NpMiw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"https://www.example.com/feed/09912\",\n    \"isVerified\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:4000/feed/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"feed",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Feed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwic2NvcGUiOiJbXCJVU0VSXCJdIiwic2Vzc2lvbklkIjoiNzY0YzhiZWUtMzQwZC00MTQyLWIzZmItYTFjYmQ5MzcxODZlIiwiaWF0IjoxNzAwMzEyMTY4fQ.DspZ2ugG-U19fUSx5V3fKrVJhXOGCx2chfKvGFAF8dU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwic2NvcGUiOiJbXCJBRE1JTlwiXSIsInNlc3Npb25JZCI6IjRiYTZmMmMzLWFjNzgtNDg0Yy1hZTA2LWViNjFjMTA2YzEwMyIsImlhdCI6MTcwMDMxMzUyOH0.m4TmBmDKSzOFeLOZYFx9eWMLnRF9_NTEibTa63NpMiw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"url\": \"https://www.example.com/feed/10\",\n    \"isVerified\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:4000/feed/update",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"feed",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
